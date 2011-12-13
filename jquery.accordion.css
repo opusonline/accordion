@@ -1,0 +1,44 @@
+.accordion {
+	overflow: hidden;
+}
+.accordion .header {
+	padding: 0.2em 0.5em;
+	padding-left: 16px;
+	cursor: pointer;
+	border: 1px solid #aaa;
+	background: #ccc;
+ 	background: -webkit-linear-gradient(#ececec, #ccc);
+ 	border-radius: 5px;
+ 	position: relative;
+}
+.accordion .header:hover {
+	background: #bbb;
+ 	background: -webkit-linear-gradient(#dbdbdb, #bbb);
+}
+.accordion .header.active {
+	background: #bbb;
+ 	background: -webkit-linear-gradient(#dbdbdb, #bbb);
+}
+.accordion div.panel {
+	padding: 1em;
+	overflow: auto;
+}
+.accordion .header:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 42%;
+	left: 6px;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	border: 3px dashed transparent;
+	border-left-color: #000;
+	border-right-width: 0;
+}
+.accordion .header.active:after {
+	border: 3px dashed transparent;
+	border-top-color: #000;
+	border-bottom-width: 0;
+}
